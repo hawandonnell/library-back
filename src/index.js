@@ -137,7 +137,8 @@ app.post("/book", async (req, res) => {
 	res.json(book);
 });
 
-const server = app.listen(5000, () =>
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () =>
 	console.log(`
     Server ready at: http://localhost:5000
     See sample requests: http://pris.ly/e/ts/rest-express#3-using-the-rest-api
